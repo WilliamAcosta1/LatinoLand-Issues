@@ -1,0 +1,56 @@
+name: "Nueva tarea o comando"
+description: "Propuesta de tarea, sistema o comando para el bot de Latinoland."
+title: "[Tarea/Comando] Breve descripción del aporte"
+labels: 
+  - "propuesta"
+  - "pendiente revisión"
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¡Gracias por contribuir al bot de Latinoland!  
+        Por favor, completa los campos a continuación para que tu propuesta sea revisada.
+
+  - type: input
+    id: nombre
+    attributes:
+      label: "Nombre del comando o tarea"
+      description: "Escribe el nombre del comando o tarea que propones."
+      placeholder: "Ejemplo: /ranking"
+      required: true
+
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: "Descripción"
+      description: "Describe brevemente qué hace este comando o tarea. Sé claro y específico."
+      placeholder: "Este comando mostrará un ranking de los usuarios más activos en el servidor."
+      required: true
+
+  - type: textarea
+    id: ejemplo
+    attributes:
+      label: "Ejemplo de uso"
+      description: "Proporciona un ejemplo práctico de cómo se utilizaría este comando o tarea."
+      placeholder: "/ranking -> Retorna: 1. Usuario1, 2. Usuario2..."
+      required: true
+
+  - type: textarea
+    id: detalles
+    attributes:
+      label: "Detalles adicionales"
+      description: "Incluye información técnica, requisitos especiales o cualquier detalle que consideres importante."
+      placeholder: "Este comando requerirá acceso a una base de datos para obtener el ranking."
+      required: false
+
+  - type: dropdown
+    id: prioridad
+    attributes:
+      label: "Prioridad"
+      description: "Indica el nivel de prioridad para este comando o tarea."
+      options:
+        - "Baja"
+        - "Media"
+        - "Alta"
+      required: true

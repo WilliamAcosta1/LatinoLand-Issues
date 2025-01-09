@@ -47,7 +47,7 @@ body:
         - "Baja"
         - "Media"
         - "Alta"
-      default: "Baja"
+      default: 0
     validations:
       required: true
 

@@ -1,7 +1,9 @@
-name: Nueva tarea o comando
-description: Propón la creación de una nueva tarea, sistema o comando para el bot
+name: "Nueva tarea o comando"
+description: "Propón la creación de una nueva tarea, sistema o comando para el bot"
 title: "[💡][Comando/Tarea] Breve descripción de tu aporte"
-labels: ["propuesta", "pendiente revisión"]
+labels: 
+  - "propuesta"
+  - "pendiente revisión"
 body:
   - type: markdown
     attributes:
@@ -9,70 +11,67 @@ body:
         ¡Gracias por contribuir al bot de Latinoland!  
         Por favor, completa los campos a continuación para que tu propuesta sea revisada más fácilmente.
 
-  - type: textarea
+  - type: input
     id: nombre
     attributes:
-      label: Nombre del comando o tarea
-      description: Escribe el nombre del comando o tarea que estás proponiendo.
-      placeholder: Ejemplo: /ranking, Sistema de puntos, etc.
+      label: "Nombre del comando o tarea"
+      description: "Escribe el nombre del comando o tarea que estás proponiendo."
+      placeholder: "Ejemplo: /ranking, Sistema de puntos, etc."
     validations:
       required: true
 
   - type: textarea
     id: descripcion
     attributes:
-      label: Descripción
-      description: Explica en detalle qué hace este comando o tarea y cómo mejorará el bot.
-      placeholder: Este comando muestra el ranking de los usuarios más activos del servidor...
+      label: "Descripción"
+      description: "Explica en detalle qué hace este comando o tarea y cómo mejorará el bot."
+      placeholder: "Este comando muestra el ranking de los usuarios más activos del servidor..."
     validations:
       required: true
 
   - type: textarea
     id: ejemplo
     attributes:
-      label: Ejemplo de uso
-      description: Proporciona un ejemplo claro de cómo se utilizaría este comando o sistema.
-      placeholder: /ranking -> Retorna: 1. Usuario1, 2. Usuario2...
+      label: "Ejemplo de uso"
+      description: "Proporciona un ejemplo claro de cómo se utilizaría este comando o sistema."
+      placeholder: "/ranking -> Retorna: 1. Usuario1, 2. Usuario2..."
     validations:
       required: true
 
   - type: dropdown
     id: prioridad
     attributes:
-      label: Prioridad
-      description: Selecciona el nivel de prioridad para esta propuesta.
+      label: "Prioridad"
+      description: "Selecciona el nivel de prioridad para esta propuesta."
       options:
-        - Baja
-        - Media
-        - Alta
-      default: Baja
+        - "Baja"
+        - "Media"
+        - "Alta"
+      default: "Baja"
     validations:
       required: true
 
   - type: checkboxes
     id: consideraciones
     attributes:
-      label: Consideraciones adicionales
-      description: Marca las opciones relevantes según tu propuesta.
+      label: "Consideraciones adicionales"
+      description: "Marca las opciones relevantes según tu propuesta."
       options:
-        - label: Este comando requiere permisos específicos (indicar en detalles adicionales)
-          required: false
-        - label: Esta propuesta necesita recursos externos (APIs, base de datos, etc.)
-          required: false
+        - label: "Este comando requiere permisos específicos (indicar en detalles adicionales)"
+        - label: "Esta propuesta necesita recursos externos (APIs, base de datos, etc.)"
 
   - type: textarea
     id: detalles
     attributes:
-      label: Detalles adicionales
-      description: Incluye información técnica, requisitos especiales o cualquier otro detalle importante.
-      placeholder: Este comando requiere conexión a una base de datos para almacenar los datos de ranking.
-      render: text
+      label: "Detalles adicionales"
+      description: "Incluye información técnica, requisitos especiales o cualquier otro detalle importante."
+      placeholder: "Este comando requiere conexión a una base de datos para almacenar los datos de ranking."
 
   - type: checkboxes
     id: terms
     attributes:
-      label: Términos de colaboración
-      description: Al enviar este issue, aceptas cumplir con las reglas del proyecto.
+      label: "Términos de colaboración"
+      description: "Al enviar este issue, aceptas cumplir con las reglas del proyecto."
       options:
-        - label: Acepto seguir las reglas del proyecto
+        - label: "Acepto seguir las reglas del proyecto"
           required: true
